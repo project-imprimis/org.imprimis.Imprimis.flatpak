@@ -1,0 +1,19 @@
+{
+  "name": "SDL_ttf",
+  "buildsystem": "autotools",
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/libsdl-org/SDL_ttf.git",
+      "tag": "release-2.20.0"
+    }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/debug",
+    "/lib/pkgconfig",
+    "/lib/*.la",
+    "/lib/*.a"
+  ]
+}

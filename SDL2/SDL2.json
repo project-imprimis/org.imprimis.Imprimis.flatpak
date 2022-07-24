@@ -1,0 +1,21 @@
+{
+  "name": "SDL2",
+  "buildsystem": "autotools",
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/libsdl-org/SDL.git",
+      "tag": "release-2.0.22"
+    }
+  ],
+  "cleanup": [
+    "/bin",
+    "/share/aclocal",
+    "/include",
+    "/lib/cmake",
+    "/lib/debug",
+    "/lib/pkgconfig",
+    "/lib/*.la",
+    "/lib/*.a"
+  ]
+}

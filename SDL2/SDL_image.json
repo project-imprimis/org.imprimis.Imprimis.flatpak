@@ -1,0 +1,19 @@
+{
+  "name": "SDL_image",
+  "buildsystem": "autotools",
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/libsdl-org/SDL_image.git",
+      "tag": "release-2.6.0"
+    }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/debug",
+    "/lib/pkgconfig",
+    "/lib/*.la",
+    "/lib/*.a"
+  ]
+}

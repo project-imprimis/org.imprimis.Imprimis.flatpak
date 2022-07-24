@@ -1,0 +1,19 @@
+{
+  "name": "SDL_mixer",
+  "buildsystem": "autotools",
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/libsdl-org/SDL_mixer.git",
+      "tag": "release-2.6.1"
+    }
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/debug",
+    "/lib/pkgconfig",
+    "/lib/*.la",
+    "/lib/*.a"
+  ]
+}

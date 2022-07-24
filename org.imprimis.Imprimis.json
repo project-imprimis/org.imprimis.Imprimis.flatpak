@@ -1,0 +1,66 @@
+{
+  "id": "org.imprimis.Imprimis",
+  "runtime": "org.freedesktop.Platform.GL.default",
+  "runtime-version": "21.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "/app/bin/imprimis",
+  "modules": [
+    "SDL2/SDL2.json",
+    "SDL2/SDL_ttf.json",
+    "SDL2/SDL_image.json",
+    "SDL2/SDL_mixer.json",
+    "shared-modules/glew/glew.json",
+    "shared-modules/glu/glu-9.json",
+    {
+      "name": "Libprimis",
+      "buildsystem": "simple",
+      "build-commands": [
+        "PREFIX=/app make -C src install"
+      ],
+      "only_arches": [
+        "x86_64"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/TheEgghead27/libprimis/",
+          "branch": "lib"
+        }
+      ],
+      "cleanup": [
+        "/include",
+        "/lib/debug"
+      ]
+    },
+    {
+      "name": "Imprimis",
+      "buildsystem": "simple",
+      "build-commands": [
+        "PREFIX=/app make install"
+      ],
+      "only_arches": [
+        "x86_64"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/TheEgghead27/imprimis/",
+          "branch": "package"
+        }
+      ],
+      "cleanup": [
+        "/include",
+        "/lib/debug"
+      ]
+    }
+  ],
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--share=ipc",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=~/.imprimis"
+  ]
+}
