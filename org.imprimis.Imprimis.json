@@ -1,9 +1,12 @@
 {
   "id": "org.imprimis.Imprimis",
-  "runtime": "org.freedesktop.Platform.GL.default",
+  "runtime": "org.freedesktop.Platform",
   "runtime-version": "21.08",
+  "platform-extensions": [
+    "org.freedesktop.Platform.GL.default"
+  ],
   "sdk": "org.freedesktop.Sdk",
-  "command": "/app/bin/imprimis",
+  "command": "imprimis",
   "modules": [
     "SDL2/SDL2.json",
     "SDL2/SDL_ttf.json",
@@ -15,6 +18,7 @@
       "name": "Libprimis",
       "buildsystem": "simple",
       "build-commands": [
+        "make -C src --jobs $FLATPAK_BUILDER_N_JOBS",
         "PREFIX=/app make -C src install"
       ],
       "only_arches": [
@@ -36,6 +40,7 @@
       "name": "Imprimis",
       "buildsystem": "simple",
       "build-commands": [
+        "make --jobs $FLATPAK_BUILDER_N_JOBS",
         "PREFIX=/app make install"
       ],
       "only_arches": [
