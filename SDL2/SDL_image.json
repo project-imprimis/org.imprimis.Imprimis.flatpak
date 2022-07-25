@@ -1,11 +1,17 @@
 {
   "name": "SDL_image",
-  "buildsystem": "autotools",
+  "buildsystem": "simple",
+  "build-commands": [
+  	"./autogen.sh",
+	"./configure --prefix=/app",
+	"make --jobs 4",
+	"make install"
+  ],
   "sources": [
     {
       "type": "git",
       "url": "https://github.com/libsdl-org/SDL_image.git",
-      "tag": "release-2.6.0"
+      "tag": "release-2.0.0"
     }
   ],
   "cleanup": [
