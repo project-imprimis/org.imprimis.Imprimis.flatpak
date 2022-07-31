@@ -5,13 +5,12 @@
     {
       "type": "git",
       "url": "https://github.com/libsdl-org/SDL_mixer.git",
-      "tag": "release-2.6.1"
+      "tag": "release-2.0.0"
     }
   ],
   "cleanup": [
     "/include",
     "/lib/cmake",
-    "/lib/debug",
     "/lib/pkgconfig",
     "/lib/*.la",
     "/lib/*.a"

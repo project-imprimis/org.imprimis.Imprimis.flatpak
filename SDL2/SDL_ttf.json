@@ -1,17 +1,22 @@
 {
   "name": "SDL_ttf",
-  "buildsystem": "autotools",
+  "buildsystem": "simple",
+  "build-commands": [
+  	"./autogen.sh",
+	"./configure --prefix=/app",
+	"make --jobs $FLATPAK_BUILDER_N_JOBS",
+	"make install"
+  ],
   "sources": [
     {
       "type": "git",
       "url": "https://github.com/libsdl-org/SDL_ttf.git",
-      "tag": "release-2.20.0"
+      "tag": "release-2.0.12"
     }
   ],
   "cleanup": [
     "/include",
     "/lib/cmake",
-    "/lib/debug",
     "/lib/pkgconfig",
     "/lib/*.la",
     "/lib/*.a"

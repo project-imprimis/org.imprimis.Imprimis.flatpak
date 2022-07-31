@@ -1,0 +1,24 @@
+{
+  "name": "libfreetype",
+  "buildsystem": "autotools",
+  "sources": [
+    {
+      "type": "archive",
+      "url": "https://download.savannah.gnu.org/releases/freetype/freetype-2.12.1.tar.gz",
+      "sha256": "efe71fd4b8246f1b0b1b9bfca13cfff1c9ad85930340c27df469733bbb620938"
+    }
+  ],
+  "post-install": [
+    "echo pkg-config --cflags --libs freetype2 > /app/bin/freetype-config",
+    "chmod a+x /app/bin/freetype-config"
+  ],
+  "cleanup": [
+    "/bin",
+    "/share/aclocal",
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig",
+    "/lib/*.la",
+    "/lib/*.a"
+  ]
+}

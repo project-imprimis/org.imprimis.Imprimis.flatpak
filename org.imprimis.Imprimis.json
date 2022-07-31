@@ -9,6 +9,7 @@
   "command": "imprimis",
   "modules": [
     "SDL2/SDL2.json",
+    "SDL2/libfreetype.json",
     "SDL2/SDL_ttf.json",
     "SDL2/SDL_image.json",
     "SDL2/SDL_mixer.json",
@@ -18,7 +19,8 @@
       "name": "Libprimis",
       "buildsystem": "simple",
       "build-commands": [
-        "make -C src --jobs $FLATPAK_BUILDER_N_JOBS",
+	"make -C src --jobs $FLATPAK_BUILDER_N_JOBS",
+
         "PREFIX=/app make -C src install"
       ],
       "only_arches": [
@@ -32,8 +34,7 @@
         }
       ],
       "cleanup": [
-        "/include",
-        "/lib/debug"
+        "/include"
       ]
     },
     {
@@ -54,8 +55,7 @@
         }
       ],
       "cleanup": [
-        "/include",
-        "/lib/debug"
+        "/include"
       ]
     }
   ],

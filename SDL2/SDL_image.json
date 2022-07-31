@@ -4,7 +4,7 @@
   "build-commands": [
   	"./autogen.sh",
 	"./configure --prefix=/app",
-	"make --jobs 4",
+	"make --jobs $FLATPAK_BUILDER_N_JOBS",
 	"make install"
   ],
   "sources": [
@@ -17,7 +17,6 @@
   "cleanup": [
     "/include",
     "/lib/cmake",
-    "/lib/debug",
     "/lib/pkgconfig",
     "/lib/*.la",
     "/lib/*.a"
