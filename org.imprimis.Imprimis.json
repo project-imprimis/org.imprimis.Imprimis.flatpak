@@ -51,7 +51,7 @@
         {
           "type": "git",
           "url": "https://github.com/TheEgghead27/imprimis/",
-          "branch": "master"
+          "branch": "flatpak-cache-test-1"
         }
       ],
       "cleanup": [
