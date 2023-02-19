@@ -29,7 +29,7 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/project-imprimis/libprimis/",
+          "url": "https://github.com/TheEgghead27/libprimis/",
           "branch": "main"
         }
       ],
@@ -50,7 +50,7 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/project-imprimis/imprimis/",
+          "url": "https://github.com/TheEgghead27/imprimis/",
           "branch": "master"
         }
       ],
