@@ -15,7 +15,7 @@ To build and use the Flatpak scripts, you must have `flatpak` and `flatpak-build
 
 To install the Flatpak's dependencies, including the build SDK, run the following command:
 ```sh
-flatpak install org.freedesktop.Platform/x86_64/21.08 org.freedesktop.Sdk/x86_64/21.08 org.freedesktop.Platform.GL.default/x86_64/21.08
+flatpak install org.freedesktop.Platform/x86_64/23.08 org.freedesktop.Sdk/x86_64/23.08 org.freedesktop.Platform.GL.default/x86_64/23.08
 ```
 
 If you wish to build the Flatpak only for local installation, you can use the following command:
@@ -31,6 +31,6 @@ flatpak build-bundle ./local imprimis.flatpak org.imprimis.Imprimis
 
 You can then install the runtime dependencies, then the bundle file by invoking:
 ```sh
-flatpak install org.freedesktop.Platform/x86_64/21.08 org.freedesktop.Platform.GL.default/x86_64/21.08
+flatpak install org.freedesktop.Platform/x86_64/23.08 org.freedesktop.Platform.GL.default/x86_64/23.08
 flatpak install imprimis.flatpak
 ```
