@@ -8,13 +8,13 @@
   "sdk": "org.freedesktop.Sdk",
   "command": "imprimis",
   "modules": [
-    "SDL2/SDL2.json",
+    "shared-modules/SDL2/SDL2-no-libdecor.json",
     "SDL2/libfreetype.json",
     "SDL2/SDL_ttf.json",
     "SDL2/SDL_image.json",
     "SDL2/SDL_mixer.json",
     "shared-modules/glew/glew.json",
-    "SDL2/glu-9.json",
+    "shared-modules/glu/glu-9.json",
     {
       "name": "Libprimis",
       "buildsystem": "simple",
