@@ -2,9 +2,7 @@
   "id": "org.imprimis.Imprimis",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "23.08",
-  "platform-extensions": [
-    "org.freedesktop.Platform.GL.default"
-  ],
+  "platform-extensions": [],
   "sdk": "org.freedesktop.Sdk",
   "command": "imprimis",
   "modules": [
